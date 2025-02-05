@@ -1,0 +1,405 @@
+:root {
+    --color-deep-background: #006769;
+    --color-main-plate: #40A578;
+    --color-text-field: #9DDE8B;
+    --button-main: #006769;
+
+    --message-my-message: #6E8A6B;
+    --message-other-message: #8A776B;
+}
+
+/*:root {
+    --color-deep-background: #254336;
+    --color-main-plate: #6B8A7A;
+    --color-text-field: #B7B597;
+    --button-main: #ce6400;
+
+    --message-my-message: #6E8A6B;
+    --message-other-message: #8A776B;
+}*/
+
+/*:root {
+    --color-deep-background: #0b0f19;
+    --color-main-plate: #111827;
+    --color-text-field: #1f2937;
+    --button-main: #ce6400;
+}*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+}
+
+.center {
+    width: 80vw;
+    height: 90vh;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: var(--color-main-plate);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: row;
+}
+
+
+#message_zone {
+    height: 80%;
+}
+
+#contacts_field {
+    width: 90%;
+    height: 80%;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2.5%;
+    overflow-y: scroll;
+}
+
+
+
+#user_box {
+    height: 10%;
+    width: 90%;
+
+    border: 1px solid black;
+    margin-top: 2.5%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#user_box img {
+    height: 90%;
+}
+
+#user_box * {
+    margin-left: 5px;
+}
+
+#curr_user_text_data {
+    display: flex;
+    flex-direction: column;
+}
+
+#curr_user_code {
+    font-size: smaller;
+}
+
+#left_bar {
+    width: 20%;
+    height: 95%;
+
+    /*border: 1px solid black;*/
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left_bar button {
+    height: 5%;
+    margin-top: 2.5%;
+    width: 90%;
+}
+
+.chat_entry {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+}
+
+.chat_entry_display {
+    max-width: 50%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 15px;
+    padding: 5px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.chat_entry.my .chat_entry_display {
+    background-color: var(--message-my-message);
+}
+
+.chat_entry.other .chat_entry_display {
+    background-color: var(--message-other-message);
+}
+
+.chat_entry.my {
+    justify-content: flex-start;
+}
+
+.chat_entry.other {
+    justify-content: flex-end;
+}
+
+.file_msg_div {
+    display: flex;
+    align-items: center;
+}
+
+.file_msg_div img {
+    margin-right: 5px;
+}
+
+.file_msg_div label:hover {
+    color: rgb(52, 52, 130);
+}
+
+.message-date {
+    font-size: x-small;
+    margin-top: 5px;
+    color: #B7B597;
+}
+
+.contacts_field_element {
+    border: 1px solid black;
+    width: 95%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    margin-top: 1vh;
+
+    border-radius: 10px;
+}
+
+.contacts_field_element:hover {
+    background:var(--color-text-field);
+}
+
+.contacts_field_element img {
+    height: 80%;
+}
+
+.contacts_field_element label {
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.contacts_field_element * {
+    margin-left: 5px;
+}
+
+#talk_field {
+    height: 90%;
+    width: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+#chat_boubble_zone {
+    border: 2px solid var(--button-main);
+    height: 85%;
+    width: 80%;
+
+    overflow-y: auto;
+}
+
+.idk {
+    background-color: var(--button-main);
+    border: 0px;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+}
+
+.idk:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+#text_input_zone {
+    /*border: 1px solid black;*/
+    margin-top: 5px;
+
+    height: 15%;
+    width: 90%;
+
+}
+
+#text_area {
+    width: 80%;
+    height: 100%;
+
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+
+    resize: none;
+
+    background-color: var(--color-text-field);
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+}
+
+#send_button {
+    font-size: larger;
+}
+
+#file_area_form {
+    display: none;
+}
+
+#buttons_div {
+    width: 18%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#buttons_div button {
+    width: 80%;
+    height: 50%;
+
+    margin-left: 20%;
+
+    background-color: var(--button-main);
+    color: white;
+
+    border: 0px;
+    border-radius: 5px;
+}
+
+#buttons_div button:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+#message_field {
+    width: 92%;
+}
+
+#message_zone {
+    height: 80%;
+}
+
+#speech_field {
+    width: 100%;
+}
+
+body {
+    background-color:var(--color-deep-background);
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ADD CONTACT MODAL */
+#add_contact_modal_bg_div {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #0000005b;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add_contact_box {
+    width: 40%;
+    height: 40%;
+    background-color: var(--color-main-plate);
+    border: 1px solid black;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#add_contact_box label {
+    font-size: larger;
+}
+
+#add_contact_box form {
+    margin-top: 5px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+#add_contact_box form * {
+    margin-top: 5px;
+}
+
+#add_contact_box button {
+    background-color: var(--button-main);
+    border: 0px;
+    width: 50%;
+
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* ADD CONTACT MODAL END */
+
+#logout_button {
+    background-color: var(--button-main);
+    border: 0px;
+    border-radius: 5px;
+}
+
+#person_talk_data {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    width: 80%;
+    padding: 10px;
+}
+
+#person_talk_data * {
+    margin-right: 5px;
+}
+
+minidenticon-svg svg {
+    border-radius: 0%;
+    height: 25px;
+    width: 25px;
+    background-color: var(--color-deep-background)
+};
+
+#logout_button:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+#add_contact_box button:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}

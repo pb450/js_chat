@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <link href="main/index.css" rel="stylesheet">
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="dayjs.min.js"></script>
+        <script type="module">
+            import { minidenticonSvg } from 'https://cdn.jsdelivr.net/npm/minidenticons@4.2.1/minidenticons.min.js'
+        </script>
+        <script src="main/index.js"></script>
+    </head>
+
+    <body>
+
+        <div id="add_contact_modal_bg_div">
+            <div id="add_contact_box">
+                <button id="add_contact_box_cancel" style="width: fit-content; float: right; padding: 1px;">
+                    <img src="img/circle-x.svg">
+                </button>
+                <label style="font-weight: bolder;">Add contact</label>
+                <label>Input their code and press add</label>
+                <label>User code is visible next to their name</label>
+
+                <form method="post" action="/addContact" id="add_user_form">
+                    <label>User code:</label>
+                    <input id="add_contact_code" name="add_contact_code" required>
+                    <button>Add</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="center">
+                <div id="left_bar">
+                    <div id="user_box">
+                        <!-- <img id="curr_user_img" src="main/fff.png"> -->
+                        <minidenticon-svg id="curr_user_img" username="laurent"></minidenticon-svg>
+                        <div id="curr_user_text_data">
+                            <label id="curr_user_label">pb450</label>
+                            <label id="curr_user_code" title="Code used to add contact"
+                            style="text-decoration: underline dotted rgb(70, 70, 70); ">0000</label>
+                        </div>
+
+                        <form method="post" action="/logout" style="margin-left: auto; margin-right: 5px;">
+                            <button style="height: fit-content; width: fit-content;" id="logout_button">
+                                <img src="img/logout.svg">
+                            </button>
+                        </form>
+                        
+                        
+                    </div>
+                    <div id="contacts_field">
+                        <div class="contacts_field_element" id="contacts_field_element_EXAMPLE">
+                            <!-- <img src="main/fff.png"> -->
+                            <minidenticon-svg class="user-image" username="laurent"></minidenticon-svg>
+                            <label class="contacts_field_element_label">EXAMPLE TEMPLATE</label>
+                        </div>
+                    </div>
+
+                    
+                        <button id="add_contact_person" class="idk">
+                            <img src="img/user-plus.svg">
+                        </button>
+                        <button id="refresh_contact_person" class="idk">
+                            <img src="img/refresh.svg">
+                        </button>
+                </div>
+                
+
+                <div id="talk_field">
+
+                    <div id="person_talk_data">
+                        <!-- <img style="max-width: 25px; max-height: 25px;" src="main/fff.png"> -->
+                        <minidenticon-svg id="curr_conv_person_img" username="laurent"></minidenticon-svg>
+                        <label id="curr_conv_person_name"></label>
+                    </div>
+                    <div id="chat_boubble_zone">
+                        <div id="tutorial_wait" style="display: flex; justify-content: center; text-align: center; margin-left: 5%; margin-top: 5%; width: 90%; height: 90%;">
+                            <label style="font-size: 2em; color: rgb(27, 27, 27);">
+                                Select or add contact on left side to start using chat
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="text_input_zone">
+
+                        <div style="height: 100%; display: flex; flex-direction: row;"> 
+                            <textarea id="text_area"></textarea>
+
+                            <form method="post" action="/upload" id="file_area_form" enctype='multipart/form-data'>
+                                <input type="file" id="file_area" name="file_area">
+                            </form>
+                            
+                            <div id="buttons_div">
+                                <button id="send_button">Send</button>
+                                <button id="attach_button">
+                                    <img src="img/paperclip.svg">
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>          
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link href="login/index.css" rel="stylesheet">
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+        <script src="login/index.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="center">
+
+                <div id="twoBoxHolder">
+                    <div id="RegisterBox" class="boxsplit">
+                        <label style="font-size: larger;font-weight: bold;">Register</label>
+                        <form class="formdesign" action="/register" method="post">
+                            <label for="register_username">Username/Nick:</label>
+                            <input id="register_username" name="register_username">
+
+                            <label for="register_mail">Email:</label>
+                            <input name="register_mail" id="register_mail" type="email">
+
+                            <label for="register_password">Password:</label>
+                            <input id="register_password" name="register_password" type="password">
+
+                            <button>Register</button>
+                        </form>
+                    </div>
+
+                    <div id="LoginBox" class="boxsplit">
+                        <label style="font-size: larger;font-weight: bold;">Log in</label>
+                        <form class="formdesign" action="/login" method="post">
+                            <label for="login_username">Username/Nick:</label>
+                            <input id="login_username" name="login_username">
+
+                            <label for="login_pass">Password:</label>
+                            <input id="login_pass" name="login_pass" type="password">
+
+                            <button>Login</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>          
+    </body>
+</html>

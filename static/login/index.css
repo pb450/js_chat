@@ -1,0 +1,109 @@
+/*:root {
+    --color-deep-background: #254336;
+    --color-main-plate: #6B8A7A;
+    --color-text-field: #B7B597;
+    --button-main: #ce6400;
+
+    --message-my-message: #6E8A6B;
+    --message-other-message: #8A776B;
+}*/
+
+:root {
+    --color-deep-background: #006769;
+    --color-main-plate: #40A578;
+    --color-text-field: #9DDE8B;
+    --button-main: #006769;
+
+    --message-my-message: #6E8A6B;
+    --message-other-message: #8A776B;
+}
+
+/*:root {
+    --color-deep-background: #0b0f19;
+    --color-main-plate: #111827;
+    --color-text-field: #1f2937;
+    --button-main: #ce6400;
+}*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+}
+
+.center {
+    width: 80vw;
+    height: 90vh;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: var(--color-main-plate);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: row;
+}
+
+#twoBoxHolder {
+    width: 80%;
+    height: fit-content;
+    /*border: 1px solid black;*/
+
+    display: flex;
+    flex-direction: row;
+}
+
+#RegisterBox {
+    border-right: 3px solid black;
+}
+
+.boxsplit {
+    width: 50%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.formdesign {
+    display: flex;
+    flex-direction: column;
+}
+
+.formdesign label {
+    margin-top: 5px;
+}
+
+.formdesign button {
+    margin-top: 5px;
+    width: 50%;
+}
+
+.boxsplit input {
+    background: var(--color-text-field);
+    border: 0px;
+}
+
+.boxsplit button {
+    background: var(--button-main);
+    border: 0px;
+    border-radius: 5px;
+}
+
+body {
+    background-color:var(--color-deep-background);
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    color: white;
+}

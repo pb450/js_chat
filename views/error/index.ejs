@@ -1,0 +1,20 @@
+<html>
+    <head>
+
+        <style>
+            label {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+    <div style="display: flex; flex-direction: column; height: 100%; width: 100%; justify-content: center; align-items: center;">
+        <label style="font-size: 25px;">Something went wrong :(</label>
+        <label>Error is:</label>
+        <label style="color: brown; font-weight: bold;"><%= error_content.ctx %></label>
+        <label style="margin-top: 10px;">
+            Return to homepage <a href="/">right here</a>
+        </label>
+    </div>
+    </body>
+</html>
