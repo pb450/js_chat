@@ -1,3 +1,4 @@
+
 # Chat in Node.js
 This project is basically test and research for making web app that includes creating accounts, syncing conversations, syncing and relaying messages (including file exchange)
 
@@ -12,3 +13,6 @@ node.js
  3. At first run, run command `npm install` to install all packages
  4. Type `node index.js`
 4. If you want edit any data in database in `db/chatdb.db` file using for example [DB Browser for SQLite](https://sqlitebrowser.org/) or [DBeaver](https://dbeaver.io/)
+### Preview
+![img1](https://raw.githubusercontent.com/pb450/js_chat/refs/heads/main/img/1.png)
+![img2](https://raw.githubusercontent.com/pb450/js_chat/refs/heads/main/img/2.png)
